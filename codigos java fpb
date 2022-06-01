@@ -1,0 +1,119 @@
+package novo;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class kokoro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		//Questão 01. Faça um algoritmo que receba dois números e ao final mostre a soma, subtração, multiplicação e a divisão dos números lidos.
+		
+		System.out.println(" digite um numero seu merda ");
+		float numeroum = entrada.nextFloat();
+		System.out.println(" Agora digite outro numero ou quebrarei sua canela ");
+		float numerodois = entrada.nextFloat();
+		System.out.println(" Apesar de você não merecer saber, o resultado da soma desses dois numeros e: " + (numeroum + numerodois) + " \n Vou lhe dizer também o resultado da subtração desses dois numeros apesar da sua cara me irritar: " + (numeroum - numerodois) +
+				" \n Agora irei te informar o resultado da mutiplicação desses dois numeros apesar de te odiar mais agora: " + (numeroum * numerodois) + 
+				" \n E por fim vou te imformar o resultado encontrado na divisão entre esses dois numeros, porem agora vou ai ter uma palavrinha com vc e se vc correr eu te mato: " + (numeroum / numerodois));
+
+
+		//Questão 02. Faça um Programa que peça a temperatura em graus Farenheit, transforme e mostre a temperatura em grau Celsius. C= (5*(F-32)/9)
+		
+		System.out.println(" \n Por favor informe o numero da temperatura atual ");
+		float numerofarenheit = entrada.nextFloat();
+		float numerocelsius = 0;
+		System.out.println(" A numero da temperatura imformada convertida em celsius e: " + ( numerocelsius = ( 5* (numerofarenheit - 32) /9 )));
+		
+		
+		
+		//Questão 03. Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Farenheit. Fº = [Cº(temperatura dada)*1.8]+32
+		
+		System.out.println(" \n Por favorzinho digite o numero da temperatura porque quero ver você bem informado S2  ");
+		float numerozinhoum = entrada.nextFloat();
+		float numerozinhodois = 0;
+		System.out.println(" A temperatura atual em farenheit e: " + ( numerozinhoum * 1.8 +32));		
+		
+		
+		
+		//Questão 04. A Loja Mamão com Açúcar está vendendo seus produtos em 5 (cinco) prestações sem juros. 
+		//Faça um algoritmo que receba um valor de uma compra e mostre o valor das prestações
+		
+		System.out.println(" \n digite aqui o valor da compra ");
+		float numerodacompra = entrada.nextFloat();
+		System.out.println(" \n O valor de cada uma das cinco prestações e: " + ( numerodacompra / 5));
+		
+		
+		
+		/*Questão 05. A padaria da FPB vende certa quantidade de pães franceses e uma quantidade de broas a dia. Cada pãozinho custa R$ 0.12 e a broa custa R$ 1.50. 
+		Ao final do dia, o dono quer saber o quanto arrecadou com as vendas dos pães e das broas, o mesmo deve guardar 10% do que arrecadou na poupança. 
+		Desenvolva um programa para informar ao dono o valor arrecadado, bem como o valor a ser depositado.
+		OBS: Utilizar a classe abaixo
+		DecimalFormat df = new DecimalFormat("##.00");
+		df.format();*/
+		
+		DecimalFormat comidaspadaria = new DecimalFormat("##.00");
+		
+		System.out.println(" \n quantos pães deseja comprar: ");
+		int quantdepaes = entrada.nextInt();
+		System.out.println(" \n quantas broas deseja comprar: ");
+		int quantbroas = entrada.nextInt();
+		
+		double paespreço = quantdepaes * 0.12;
+		double broaspreço = quantbroas * 1.50;
+		double valordasomacomida = paespreço + broaspreço;
+		double dinheiropoupado =  valordasomacomida * 0.10;
+		
+		System.out.println(" \n lucrou: " + comidaspadaria.format(paespreço) + " de pães, " + " e lucrou: " + comidaspadaria.format(broaspreço) + " de broas, " + " dando um total de: " + comidaspadaria.format(valordasomacomida) ) ;
+		
+		System.out.println(" \n devera guardar o valor de " + comidaspadaria.format(dinheiropoupado));
+		
+		
+        
+		/*Questão 06. Três amigos: João, Carlos e Paulo, decidiram rachar igualmente uma conta de um bar. Faça um programa para ler o valor total de uma conta e imprimir quanto cada um deve pagar, mas faça com que João e Carlos não paguem centavos.
+		Ex.2 Uma conta de R$ 101,53, resulta em R$ 33,00 para João e Carlos, já para Paulo R$ 33,53.
+		Obs.: Utilizar a classe abaixo
+		DecimalFormat df = new DecimalFormat("##.00");
+		df.format();*/
+		
+		DecimalFormat valorbirita = new DecimalFormat("##.00");
+		DecimalFormat valorbiritadois = new DecimalFormat ("##");
+		
+		System.out.println(" \n digite o valor da biritada total");
+		double valortotaldaconta = entrada.nextDouble();
+		double totaldividido = valortotaldaconta / 3;
+		System.out.println(" \n joão devera pagar: " + valorbiritadois.format(totaldividido) + " \n já Carlos: " + valorbiritadois.format(totaldividido) + " \n é Paulo pagara: " + valorbirita.format(totaldividido));
+				
+		
+		
+         //outra forma de fazer
+	        
+	    DecimalFormat df = new DecimalFormat("R$ ##.00");
+
+	   System.out.println("Informe o valor da conta: ");
+	   float valorDaConta = entrada.nextFloat();
+
+	   //convertendo o valor da conta de float para inteiro
+	   int conta = (int) valorDaConta;
+
+	   int joao = conta /  3;
+	   int carlos = joao;
+	   float paulo = valorDaConta - (joao + carlos);
+
+	   System.out.println("Valor pago por João é " + df.format(joao));
+	   System.out.println("Valor pago por Carlos é " + df.format(carlos));
+	   System.out.println("Valor pago por Paulo é " + df.format(paulo));
+		
+		
+		
+		
+
+
+entrada.close();
+
+	}
+
+}
