@@ -1,0 +1,97 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class AulaArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		ArrayList<String> linguagens = new ArrayList<String>();
+		
+		
+		
+		linguagens.add("Java");
+		linguagens.add("Kotlin");
+		linguagens.add("C#");
+		
+		System.out.println(linguagens);
+		System.out.println(linguagens.get(1));
+		//alterar a posição
+		linguagens.set(1, "Python");
+		
+		System.out.println(linguagens);
+		System.out.println(linguagens.size());
+		
+		for (String item : linguagens) {
+			if(item == "Java")
+				System.out.println(item+" - Já aprendi :) ");
+			    System.out.println(item+" - ainda não :( ");
+		}
+		
+		//esse ordena a lista
+		Collections.sort(linguagens);
+		System.out.println(linguagens);
+		
+		
+//		Fazer uma pilha usando array list
+//		Inserir 5 nomes de filmes
+//		Ordenar
+//		Alternar o filme da posição 3 por "tinatic"
+//		Imprimir o filme da posição 2
+//		Inserir mais 3 filmes
+//		Imprimir o tamanho da lista de filmes
+		
+		ArrayList<String> filmes = new ArrayList<String>();
+		
+		filmes.add("Sharkinado");
+		filmes.add("Senhor dos aneis");
+		filmes.add("Jumanji");
+		filmes.add("Shrek");
+		filmes.add("kung fusão");
+		
+		Collections.sort(filmes);
+		System.out.println(filmes);
+		
+		filmes.set(3, "Tinatic");
+		
+		System.out.println(filmes.get(2));
+		System.out.println(filmes);
+		
+		filmes.add("A coisa");
+		filmes.add("Madrugada dos mortos");
+		filmes.add("Kill bill");
+		
+		System.out.println(filmes.size());
+	}
+	
+import java.util.Stack;
+
+public class Pilha {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Stack<String> palavras = new Stack<String>();
+		
+		
+		palavras.add("primeira");
+		palavras.add("segunda");
+		palavras.add("terceira");
+		palavras.add("quarta");
+		palavras.add("quinta");
+		palavras.add("sexta");
+		
+		System.out.println(palavras);
+		
+		//LIFO - Last In First Out
+		//retirar o valor do topo da pilha
+		palavras.pop();
+		System.out.println(palavras);
+		System.out.println(palavras.peek());
+		System.out.println(palavras.size());
+		
+		
+	}
+
+}
